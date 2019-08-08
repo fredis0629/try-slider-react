@@ -1,12 +1,16 @@
 import React from "react";
 import LanguageConteiner from "./LanguageCont";
+import backgroundF from "./images/bg.png";
+import logo from "./images/LS-logo.svg";
+import logoBe from "./images/behance-logo.svg";
+import logoInst from "./images/instagram.svg";
 
 class Footer extends React.Component {
   render() {
     return (
-      <footer>
+      <footer style={{ background: `url(${backgroundF})`, backgroundSize: "100% 100%" }}>
         <div class="divLogo">
-          <img src="./images/LS-logo.svg" class="logo" />
+          <img src={logo} class="logo" />
         </div>
         <nav>
           <span class="navbar-toggle">
@@ -34,12 +38,12 @@ class Footer extends React.Component {
         </nav>
         <div class="divBe">
           <a href="#">
-            <img src="./images/behance-logo.svg" class="be" />
+            <img src={logoBe} class="be" />
           </a>
         </div>
         <div class="divInst">
           <a href="#">
-            <img src="./images/instagram.svg" class="inst" />
+            <img src={logoInst} class="inst" />
           </a>
         </div>
       </footer>
