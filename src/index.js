@@ -23,9 +23,8 @@ function renderShowSlide() {
   );
   return 0;
 }
-window.onload = function() {
-  renderShowSlide();
-};
+renderShowSlide();
+
 export default renderShowSlide;
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
