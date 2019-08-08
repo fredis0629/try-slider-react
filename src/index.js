@@ -1,13 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ShowSlide from "./App";
-import LanguageConteiner from "./LanguageCont";
+import Footer from "./Footer";
 import * as serviceWorker from "./serviceWorker";
 import "./styles.css";
 
+let aniStyle = "fade";
+let changeAnimationStyle = () => {
+  aniStyle == "fade" ? (aniStyle = "toSide") : (aniStyle = "fade");
+  renderShowSlide();
+};
+
 function renderShowSlide() {
-  ReactDOM.render(<LanguageConteiner />, document.getElementById("liAniStyle"));
-  ReactDOM.render(<ShowSlide />, document.getElementById("content"));
+  ReactDOM.render(
+    <>
+      <div className="content">
+        <ShowSlide aniStyle={aniStyle} />
+      </div>
+      <Footer aniStyle={aniStyle} changeAnimationStyle={changeAnimationStyle} />
+    </>,
+    document.getElementById("root")
+  );
+  return 0;
 }
 window.onload = function() {
   renderShowSlide();

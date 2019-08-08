@@ -35,6 +35,11 @@ img {
 }
 
 /*--------------------------------------------*/
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .content {
   overflow-x: hidden;
   flex-grow: 1;

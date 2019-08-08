@@ -35,7 +35,7 @@ function setState(newState) {
 
 class ShowSlide extends React.Component {
   render() {
-    let animMode = document.getElementById("aniStyle").innerHTML;
+    let animMode = this.props.aniStyle;
     function direction() {
       let result = {};
       if (animMode == "toSide") {
