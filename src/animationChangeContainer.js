@@ -1,6 +1,6 @@
 import React from "react";
 
-class LanguageConteiner extends React.Component {
+class AnimationChangeContainer extends React.Component {
   render() {
     return (
       <a id="aniStyle" onClick={this.props.changeAnimationStyle}>
@@ -10,4 +10,4 @@ class LanguageConteiner extends React.Component {
   }
 }
 
-export default LanguageConteiner;
+export default AnimationChangeContainer;

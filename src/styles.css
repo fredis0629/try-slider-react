@@ -118,16 +118,8 @@ dot:hover {
 }
 
 /*--------------------------------------------*/
-.fade {
-  z-index: 2;
-  opacity: 1;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
 
-@webkit-keyframes fade {
+@webkit-keyframes toFade {
   from {
     opacity: 0.4;
   }
@@ -137,7 +129,7 @@ dot:hover {
   }
 }
 
-@keyframes fade {
+@keyframes toFade {
   from {
     opacity: 0.4;
   }
@@ -147,14 +139,7 @@ dot:hover {
   }
 }
 
-.fadeHide {
-  -webkit-animation-name: fadeHide;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fadeHide;
-  animation-duration: 1.5s;
-}
-
-@webkit-keyframes fadeHide {
+@webkit-keyframes toFadeHide {
   from {
     opacity: 1;
     display: block;
@@ -166,7 +151,7 @@ dot:hover {
   }
 }
 
-@keyframes fadeHide {
+@keyframes toFadeHide {
   from {
     opacity: 1;
     display: block;
@@ -179,13 +164,6 @@ dot:hover {
 }
 
 /*--------------------------------------------*/
-.toSide {
-  opacity: 1;
-  -webkit-animation-name: toSideLeft;
-  -webkit-animation-duration: 1s;
-  animation-name: toSideLeft;
-  animation-duration: 1s;
-}
 
 @webkit-keyframes toSideRight {
   from {
@@ -235,14 +213,7 @@ dot:hover {
   }
 }
 
-.toSideHide {
-  -webkit-animation-name: toSideHideLeft;
-  -webkit-animation-duration: 1.5s;
-  animation-name: toSideHideLeft;
-  animation-duration: 1.5s;
-}
-
-@webkit-keyframes toSideHideRight {
+@webkit-keyframes toSideRightHide {
   from {
     opacity: 1;
     left: 50%;
@@ -256,7 +227,7 @@ dot:hover {
   }
 }
 
-@keyframes toSideHideRight {
+@keyframes toSideRightHide {
   from {
     opacity: 1;
     left: 50%;
@@ -270,7 +241,7 @@ dot:hover {
   }
 }
 
-@webkit-keyframes toSideHideLeft {
+@webkit-keyframes toSideLeftHide {
   from {
     opacity: 1;
     left: 50%;
@@ -284,7 +255,7 @@ dot:hover {
   }
 }
 
-@keyframes toSideHideLeft {
+@keyframes toSideLeftHide {
   from {
     opacity: 1;
     left: 50%;

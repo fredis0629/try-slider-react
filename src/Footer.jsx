@@ -1,5 +1,5 @@
 import React from "react";
-import LanguageConteiner from "./LanguageCont";
+import AnimationChangeContainer from "./animationChangeContainer";
 import backgroundF from "./images/bg.png";
 import logo from "./images/LS-logo.svg";
 import logoBe from "./images/behance-logo.svg";
@@ -9,18 +9,13 @@ class Footer extends React.Component {
   render() {
     return (
       <footer style={{ background: `url(${backgroundF})`, backgroundSize: "100% 100%" }}>
-        <div class="divLogo">
-          <img src={logo} class="logo" />
+        <div className="divLogo">
+          <img src={logo} className="logo" />
         </div>
         <nav>
-          <span class="navbar-toggle">
-            <a onclick="manageNavbar()" class="toggle-link">
-              ☰
-            </a>
-          </span>
           <ul>
             <li id="liAniStyle">
-              <LanguageConteiner aniStyle={this.props.aniStyle} changeAnimationStyle={this.props.changeAnimationStyle} />
+              <AnimationChangeContainer aniStyle={this.props.aniStyle} changeAnimationStyle={this.props.changeAnimationStyle} />
             </li>
             <li>
               <a href="#">about us</a>
@@ -36,14 +31,14 @@ class Footer extends React.Component {
             </li>
           </ul>
         </nav>
-        <div class="divBe">
+        <div className="divBe">
           <a href="#">
-            <img src={logoBe} class="be" />
+            <img src={logoBe} className="be" />
           </a>
         </div>
-        <div class="divInst">
+        <div className="divInst">
           <a href="#">
-            <img src={logoInst} class="inst" />
+            <img src={logoInst} className="inst" />
           </a>
         </div>
       </footer>
