@@ -13,11 +13,58 @@ const Slide = styled.div`
   animation-duration: 1.5s;
   animation-name: ${props => props.aniNameSee(props.isCurent, props.isPref)};
 `;
+
+const UlFooterComponent = styled.ul`
+  flex-grow: 1;
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  padding: 0;
+  justify-content: flex-end;
+  height: inherit;
+  @media (max-width: 700px) {
+    z-index: 7;
+    flex-direction: column;
+    list-style-type: none;
+    display: ${props => (props.isShowToggle ? "flex" : "none")};
+    position: absolute;
+    background-color: #000;
+    height: 290px;
+    bottom: 70px;
+    right: 0;
+    & li a {
+      line-height: 58px;
+    }
+  }
+`;
+const SpanFooterBurger = styled.span`
+  height: 70px;
+  cursor: pointer;
+  padding: 2vw;
+  font-size: 26px;
+  border: none;
+  padding: 0;
+  display: none;
+  justify-content: right;
+  align-items: center;
+  & a {
+    color: #fff;
+  }
+  @media (max-width: 700px) {
+    display: flex;
+  }
+`;
+
 class ShowSlide extends React.Component {
   state = {
     indexPrev: 0,
     index: 1,
-    animMode: "toFade"
+    animMode: "toFade",
+    isShowToggle: true
+  };
+  componentDidMount = () => {
+    window.addEventListener("resize", this.setState({ isShowToggle: document.innerWidth > 500 }));
   };
   changeAnimationStyle = () => {
     this.setState(cur => ({ animMode: cur.animMode === "toFade" ? "toSide" : "toFade" }));
@@ -45,6 +92,9 @@ class ShowSlide extends React.Component {
       result += isCurent ? "" : "Hide";
     }
     return result;
+  };
+  toggleMenu = () => {
+    this.setState(cur => (cur.isShowToggle = !cur.isShowToggle));
   };
   render() {
     return (
@@ -74,7 +124,14 @@ class ShowSlide extends React.Component {
             })}
           </div>
         </div>
-        <Footer aniStyle={this.state.animMode} changeAnimationStyle={this.changeAnimationStyle} />
+        <Footer
+          aniStyle={this.state.animMode}
+          changeAnimationStyle={this.changeAnimationStyle}
+          isShowToggle={this.state.isShowToggle}
+          toggleMenu={this.toggleMenu}
+          UlFooterComponent={UlFooterComponent}
+          SpanFooterBurger={SpanFooterBurger}
+        />
       </>
     );
   }

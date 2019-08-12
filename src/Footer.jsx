@@ -4,6 +4,7 @@ import backgroundF from "./images/bg.png";
 import logo from "./images/LS-logo.svg";
 import logoBe from "./images/behance-logo.svg";
 import logoInst from "./images/instagram.svg";
+import { thisExpression } from "@babel/types";
 
 class Footer extends React.Component {
   render() {
@@ -13,8 +14,13 @@ class Footer extends React.Component {
           <img src={logo} className="logo" />
         </div>
         <nav>
-          <ul>
-            <li id="liAniStyle">
+          <this.props.SpanFooterBurger>
+            <a onClick={this.props.toggleMenu} className="toggle-link">
+              ☰
+            </a>
+          </this.props.SpanFooterBurger>
+          <this.props.UlFooterComponent isShowToggle={this.props.isShowToggle}>
+            <li>
               <AnimationChangeContainer aniStyle={this.props.aniStyle} changeAnimationStyle={this.props.changeAnimationStyle} />
             </li>
             <li>
@@ -29,7 +35,7 @@ class Footer extends React.Component {
             <li>
               <a href="#">EN</a>
             </li>
-          </ul>
+          </this.props.UlFooterComponent>
         </nav>
         <div className="divBe">
           <a href="#">

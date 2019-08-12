@@ -107,47 +107,15 @@ dot:hover {
   background-color: #717171;
 }
 
-.slides {
-  opacity: 0;
-  z-index: 1;
-  position: absolute;
-  width: max-content;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-}
-
 /*--------------------------------------------*/
-
-@webkit-keyframes toFade {
-  from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 @keyframes toFade {
   from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@webkit-keyframes toFadeHide {
-  from {
-    opacity: 1;
-    display: block;
-  }
-
-  to {
     opacity: 0;
-    display: none;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -165,34 +133,10 @@ dot:hover {
 
 /*--------------------------------------------*/
 
-@webkit-keyframes toSideRight {
-  from {
-    opacity: 0.4;
-    left: -50%;
-  }
-
-  to {
-    opacity: 1;
-    left: 50%;
-  }
-}
-
 @keyframes toSideRight {
   from {
-    opacity: 0.4;
+    opacity: 0;
     left: -50%;
-  }
-
-  to {
-    opacity: 1;
-    left: 50%;
-  }
-}
-
-@webkit-keyframes toSideLeft {
-  from {
-    opacity: 0.4;
-    left: 150%;
   }
 
   to {
@@ -203,27 +147,13 @@ dot:hover {
 
 @keyframes toSideLeft {
   from {
-    opacity: 0.4;
-    left: 150%;
-  }
-
-  to {
-    opacity: 1;
-    left: 50%;
-  }
-}
-
-@webkit-keyframes toSideRightHide {
-  from {
-    opacity: 1;
-    left: 50%;
-    display: block;
-  }
-
-  to {
     opacity: 0;
     left: 150%;
-    display: none;
+  }
+
+  to {
+    opacity: 1;
+    left: 50%;
   }
 }
 
@@ -237,20 +167,6 @@ dot:hover {
   to {
     opacity: 0;
     left: 150%;
-    display: none;
-  }
-}
-
-@webkit-keyframes toSideLeftHide {
-  from {
-    opacity: 1;
-    left: 50%;
-    display: block;
-  }
-
-  to {
-    opacity: 0;
-    left: -50%;
     display: none;
   }
 }
@@ -305,9 +221,6 @@ footer div a {
   height: 40px;
 }
 
-.divLogo {
-}
-
 .be {
   height: 14px;
   width: 22px;
@@ -335,25 +248,6 @@ nav {
   flex-grow: 1;
   height: 70px;
 }
-
-.navbar-toggle {
-  display: none;
-  height: 70px;
-}
-.navbar-toggle a {
-  color: #fff;
-}
-ul {
-  flex-grow: 1;
-  margin: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  padding: 0;
-  justify-content: flex-end;
-  height: inherit;
-}
-
 li {
   list-style-type: none;
 }
@@ -369,26 +263,6 @@ li a {
 
 li:hover {
   background-color: #000;
-}
-
-@media screen and (max-width: 500px) {
-  ul {
-    flex-direction: column;
-    list-style-type: none;
-    display: none;
-  }
-
-  .navbar-toggle {
-    display: block;
-    cursor: pointer;
-    padding: 2vw;
-    font-size: 3vh;
-    border: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 /*--------------------------------------------*/
